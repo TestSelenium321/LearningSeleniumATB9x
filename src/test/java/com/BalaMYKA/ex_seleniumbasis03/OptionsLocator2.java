@@ -3,11 +3,12 @@ package com.BalaMYKA.ex_seleniumbasis03;
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
-public class OptionsLocator {
+public class OptionsLocator2 {
 
     @Description("Selenium Options")
     @Test
@@ -16,11 +17,11 @@ public class OptionsLocator {
 
         // EdgeOptions, ChromeOptions, FirefoxOptions, SafariOptions
 
-        EdgeOptions edgeoptions = new EdgeOptions();
-        edgeoptions.addArguments("--headless");
-        edgeoptions.addArguments("--start-maximized");
+        ChromeOptions chromeoptions = new ChromeOptions();
+        chromeoptions.addArguments("--headless");
+        chromeoptions.addArguments("--start-maximized");
 
-        WebDriver driver = new EdgeDriver(edgeoptions);
+        WebDriver driver = new ChromeDriver(chromeoptions);
         driver.get("https://google.com");
 
         // EdgeOptions -> It will help you set the browser
@@ -42,5 +43,4 @@ public class OptionsLocator {
 
 
     }
-
 }
