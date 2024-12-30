@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestSelenium04_Task {
+public class TestSelenium04_Task1 {
 
     @Description("Verify the url is displayed as expected after loginto katlon")
     @Test
@@ -39,9 +39,15 @@ public class TestSelenium04_Task {
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/#appointment");
 
+        if (driver.getCurrentUrl().contains("Make Appointment")) {
+            System.out.println("Text is displayed as expected");
+            Assert.assertTrue(true);
+        } else {
+            System.out.println("Text is not displayed as expected");
+        }
+
         driver.close();
-
-
+        driver.quit();
 
     }
 }
