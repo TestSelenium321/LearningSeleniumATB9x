@@ -1,11 +1,9 @@
-package com.BalaMYKA.ex_seleniumbasis03;
+package com.BalaMYKA.ex_seleniumbasis03_Options;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
 public class OptionsLocator2 {

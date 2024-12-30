@@ -1,4 +1,4 @@
-package com.BalaMYKA.ex_seleniumbasis03;
+package com.BalaMYKA.ex_seleniumbasis03_Options;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
