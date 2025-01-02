@@ -8,14 +8,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Login360url {
+public class seleniumProgram_Task31 {
 
     @Description("To verify the error message in 360url")
     @Test
 
-    public void Testmessage_360() throws Exception {
+    public void Test_message_360() throws Exception {
 
         WebDriver driver = new EdgeDriver();
+
         driver.get("https://www.idrive360.com/enterprise/login");
         driver.manage().window().maximize();
 
@@ -32,14 +33,14 @@ public class Login360url {
         WebElement signin = driver.findElement(By.xpath("//button[@id='frm-btn']"));
         signin.click();
 
-        Thread.sleep(5000);
+        Thread.sleep(15000);
 
-        WebElement errormessge = driver.findElement(By.xpath("//h5[text()='Your free trial has expired']"));
-        Assert.assertEquals(errormessge.getText(), "Your free trial has expired");
+        //WebElement errormessge = driver.findElement(By.xpath("//h5[text()='Your free trial has expired']"));
+        WebElement errormessage = driver.findElement(By.xpath("//h5[@class='id-card-title']"));
+        Assert.assertEquals(errormessage.getText(), "Your free trial has expired");
 
         driver.close();
-
-
+        driver.quit();
 
 
     }
